@@ -1,0 +1,11 @@
+# Carpetas de compilación
+**/build/
+**/dist/
+# Configuración privada de NetBeans
+**/nbproject/private/
+# Archivos temporales y de sistema
+**/*.bak
+**/*.orig
+**/*.rej
+.DS_Store
+Thumbs.db
