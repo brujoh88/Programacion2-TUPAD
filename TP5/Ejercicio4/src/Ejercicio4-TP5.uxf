@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umlet_diagram>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>
+Banco
+--
+- nombre: String
+- cuit: String
+--
++ getNombre(): String
++ setNombre(String): void
++ getCuit(): String
++ setCuit(String): void
++ toString(): String
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>180</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>
+TarjetaDeCredito
+--
+- numero: String
+- fechaVencimiento: String
+- titular: Cliente
+- banco: Banco
+--
++ getNumero(): String
++ setNumero(String): void
++ getFechaVencimiento(): String
++ setFechaVencimiento(String): void
++ getTitular(): Cliente
++ setTitular(Cliente): void
++ getBanco(): Banco
++ setBanco(Banco): void
++ toString(): String
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>170</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>
+Cliente
+--
+- nombre: String
+- dni: String
+- tarjeta: TarjetaDeCredito
+--
++ getNombre(): String
++ setNombre(String): void
++ getDni(): String
++ setDni(String): void
++ getTarjeta(): TarjetaDeCredito
++ setTarjeta(TarjetaDeCredito): void
++ toString(): String
+    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <!-- Asociación bidireccional Cliente <-> TarjetaDeCredito -->
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>10</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>
+lt=1..1,rt=1..1
+</panel_attributes>
+    <additional_attributes>
+      <start_element>TarjetaDeCredito</start_element>
+      <end_element>Cliente</end_element>
+      <type>association</type>
+    </additional_attributes>
+  </element>
+  <!-- Agregación TarjetaDeCredito -> Banco -->
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>10</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>
+lt=1,rt>0..*
+</panel_attributes>
+    <additional_attributes>
+      <start_element>TarjetaDeCredito</start_element>
+      <end_element>Banco</end_element>
+      <type>aggregation</type>
+    </additional_attributes>
+  </element>
+</umlet_diagram>
