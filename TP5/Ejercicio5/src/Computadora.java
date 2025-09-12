@@ -13,10 +13,10 @@ public class Computadora {
 	private PlacaMadre placaMadre; // Composición
 	private Propietario propietario; // Asociación bidireccional
 
-	public Computadora(String marca, String numeroSerie, PlacaMadre placaMadre) {
+	public Computadora(String marca, String numeroSerie, String modelo, String chipset) {
 		this.marca = marca;
 		this.numeroSerie = numeroSerie;
-		this.placaMadre = placaMadre;
+		this.placaMadre = new PlacaMadre(modelo, chipset);
 	}
 
 	public String getMarca() {

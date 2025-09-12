@@ -12,12 +12,10 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // Crear una placa madre
-        PlacaMadre placaMadre = new PlacaMadre("ASUS ROG STRIX", "Z490");
+    public static void main(String[] args) {       
 
         // Crear una computadora con la placa madre
-        Computadora computadora = new Computadora("Dell", "12345XYZ", placaMadre);
+        Computadora computadora = new Computadora("Dell", "12345XYZ", "ASUS ROG STRIX", "Z490");
 
         // Crear un propietario
         Propietario propietario = new Propietario("Juan Perez", "98765432");
